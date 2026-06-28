@@ -149,4 +149,4 @@ discard.
 
 ## License
 
-MIT (or your preferred license — update before publishing).
+MIT 
