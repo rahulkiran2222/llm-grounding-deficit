@@ -1,0 +1,32 @@
+[project]
+name = "llm-grounding-deficit"
+version = "0.1.0"
+description = "Empirical proxy harness for the grounding-deficit framework (Three Lenses, One Gap)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "openai>=1.40",
+    "anthropic>=0.34",
+    "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+dashboard = [
+    "streamlit>=1.37",
+    "plotly>=5.22",
+]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["grounding_deficit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
